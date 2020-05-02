@@ -34,6 +34,7 @@ const HomePage = () => (
                     <span className='subtitle'>SHOP NOW</span>
                 </div>
             </div>
+            
         </div>
     </div>
 )
