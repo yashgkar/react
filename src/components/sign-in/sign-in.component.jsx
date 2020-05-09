@@ -11,7 +11,8 @@ class SignIn extends React.Component {
         super(props);
         this.state = {
             email: '',
-            password: ''
+            password: '',
+            cursor: ''
         }
     }
 
@@ -27,6 +28,12 @@ class SignIn extends React.Component {
         this.setState({ [name]: value });
     }
 
+    boxClick = (e) => {
+        this.setState({
+            cursor: 'none'
+        })
+    }
+
     render() {
         return (
             <div className='sign-in'>
@@ -39,6 +46,8 @@ class SignIn extends React.Component {
                         type='email'
                         value={this.state.email}
                         label='Email'
+                        style={{ cursor: this.state.cursor }}
+                        onClick={this.boxClick}
                         required
                     />
                     <FormInput name='password'
@@ -46,6 +55,8 @@ class SignIn extends React.Component {
                         type='password'
                         value={this.state.password}
                         label='Password'
+                        style={{ cursor: this.state.cursor }}
+                        onClick={this.boxClick}
                         required
                     />
                     <div className='buttons'>
