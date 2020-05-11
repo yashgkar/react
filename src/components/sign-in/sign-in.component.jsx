@@ -12,7 +12,7 @@ class SignIn extends React.Component {
         this.state = {
             email: '',
             password: '',
-            cursor: ''
+            //cursor: ''
         }
     }
 
@@ -28,11 +28,11 @@ class SignIn extends React.Component {
         this.setState({ [name]: value });
     }
 
-    boxClick = (e) => {
+    /*boxClick = (e) => {
         this.setState({
             cursor: 'none'
         })
-    }
+    }*/
 
     render() {
         return (
@@ -46,8 +46,8 @@ class SignIn extends React.Component {
                         type='email'
                         value={this.state.email}
                         label='Email'
-                        style={{ cursor: this.state.cursor }}
-                        onClick={this.boxClick}
+                        //style={{ cursor: this.state.cursor }}
+                       //onClick={this.boxClick}
                         required
                     />
                     <FormInput name='password'
@@ -55,8 +55,6 @@ class SignIn extends React.Component {
                         type='password'
                         value={this.state.password}
                         label='Password'
-                        style={{ cursor: this.state.cursor }}
-                        onClick={this.boxClick}
                         required
                     />
                     <div className='buttons'>
