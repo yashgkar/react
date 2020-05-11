@@ -14,7 +14,7 @@ class SignUp extends React.Component {
         this.state = {
             displayName: '',
             email: '',
-            password: '';
+            password: '',
             confirmPassword: ''
         };
     }
@@ -24,7 +24,7 @@ class SignUp extends React.Component {
 
         const { displayName, email, password, confirmPassword } = this.state;
 
-        if (password != confirmPassword) {
+        if (password !== confirmPassword) {
             alert("Passwords don't match");
             return;
         }
@@ -51,7 +51,7 @@ class SignUp extends React.Component {
                 <form className='sign-up-form' onSubmit={this.handleSubmit}>
                     <FormInput
                         type='text'
-                        name='displayname'
+                        name='displayName'
                         value={displayName}
                         onChange={this.handleChange}
                         label='Display Name'
